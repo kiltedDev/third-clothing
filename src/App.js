@@ -5,10 +5,12 @@ import { connect } from 'react-redux';
 import './App.css';
 
 import Header from './components/header/header.component';
-import HomePage from './pages/home/home.page';
-import ShopPage from './pages/shop/shop.page';
-import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.page';
 import { setCurrentUser } from './redux/user/user.actions';
+
+import HomePage            from './pages/home/home.page';
+import ShopPage            from './pages/shop/shop.page';
+import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.page';
+import CheckoutPage        from './pages/checkout/checkout.page';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
@@ -30,7 +32,7 @@ class App extends React.Component {
         });
       }
 
-      setCurrentUser(userAuth);
+      setCurrentUser( userAuth );
     });
   }
 
@@ -43,8 +45,9 @@ class App extends React.Component {
       <div>
         <Header />
         <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route path='/shop' component={ShopPage} />
+          <Route exact path='/' component={ HomePage } />
+          <Route path='/shop' component={ ShopPage } />
+          <Route exact path='/checkout' component={ CheckoutPage } />
           <Route
             exact
             path='/signin'
