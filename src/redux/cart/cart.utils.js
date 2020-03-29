@@ -5,12 +5,12 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
 
   if (existingCartItem) {
     return cartItems.map( cartItem =>
-      cartItem.id == cartItemToAdd.id
+      cartItem.id === cartItemToAdd.id
       ? { ...cartItem, quantity: cartItem.quantity +1 }
       : cartItem
     )
   } else {
     return[ ...cartItems, {...cartItemToAdd, quantity: 1 }]
   }
-  
+
 }
