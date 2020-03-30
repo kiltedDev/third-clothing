@@ -11,3 +11,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.Checkout.is-desktop .Header-logoBorder {
+  background-color: white;
+}
+
+.Checkout.is-desktop .Header-logoImage:not(.not) {
+  margin-left: 0px;
+  border-radius: 20%;
+  transform:scale(.8);
+}

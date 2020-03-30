@@ -5,7 +5,7 @@ import CustomButton from '../custom-button/custom-button.component';
 import { auth } from '../../firebase/firebase.utils';
 
 
-import { signInWithGoogle, signInWithEmailAndPassword } from '../../firebase/firebase.utils';
+import { signInWithGoogle } from '../../firebase/firebase.utils';
 
 import './sign-in.styles.scss';
 
