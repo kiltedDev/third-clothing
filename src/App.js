@@ -32,11 +32,11 @@ class App extends React.Component {
     // NOTE: used for seeding the database
     // const { collectionsArray } = this.props;
 
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
-      if (userAuth) {
-        const userRef = await createUserProfileDocument(userAuth);
+    this.unsubscribeFromAuth = auth.onAuthStateChanged( async userAuth => {
+      if ( userAuth ) {
+        const userRef = await createUserProfileDocument( userAuth );
 
-        userRef.onSnapshot(snapShot => {
+        userRef.onSnapshot( snapShot => {
           setCurrentUser({
             id: snapShot.id,
             ...snapShot.data()
@@ -70,7 +70,7 @@ class App extends React.Component {
           <Route
             exact
             path='/signin'
-            render={() =>
+            render={ () =>
               this.props.currentUser ? (
                 <Redirect to='/' />
               ) : (
@@ -94,4 +94,4 @@ const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch( setCurrentUser( user ) )
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect( mapStateToProps, mapDispatchToProps )( App );
