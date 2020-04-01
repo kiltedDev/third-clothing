@@ -9,7 +9,8 @@ import Header from './components/header/header.component';
 
 import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
-import { selectCollectionsForPreview } from './redux/shop/shop.selectors';
+// NOTE: used for seeding the database
+// import { selectCollectionsForPreview } from './redux/shop/shop.selectors';
 
 import HomePage            from './pages/home/home.page';
 import ShopPage            from './pages/shop/shop.page';
@@ -17,7 +18,8 @@ import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import CheckoutPage        from './pages/checkout/checkout.page';
 
 import {
-  // addCollectionAndDocuments, // used to seed db, no longer needed but kept for posterity
+  // NOTE: used for seeding the database
+  // addCollectionAndDocuments,
   auth,
   createUserProfileDocument
 } from './firebase/firebase.utils';
@@ -26,7 +28,9 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    const { setCurrentUser, collectionsArray } = this.props;
+    const { setCurrentUser } = this.props;
+    // NOTE: used for seeding the database
+    // const { collectionsArray } = this.props;
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
@@ -43,6 +47,7 @@ class App extends React.Component {
       setCurrentUser( userAuth );
 
       // seeding the database
+      // NOTE: used for seeding the database
       // addCollectionAndDocuments(
       //   'collections',
       //   collectionsArray.map(({ title, items }) => ({ title, items }))
@@ -80,8 +85,9 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser,
-  collectionsArray: selectCollectionsForPreview
+  // NOTE: used for seeding the database
+  // collectionsArray: selectCollectionsForPreview,
+  currentUser: selectCurrentUser
 });
 
 const mapDispatchToProps = dispatch => ({
