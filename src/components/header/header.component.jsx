@@ -19,7 +19,7 @@ import {
 
 const Header = ({ currentUser, hidden }) => (
 
-  <HeaderContainer>
+  <HeaderContainer  className='header'>
     <LogoContainer className='logo-container' to='/'>
       <Logo className='logo' alt='horn of odin produced by flaticon.com' label='horn of odin produced by flaticon.com'/>
     </LogoContainer>
