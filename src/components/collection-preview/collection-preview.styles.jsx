@@ -20,7 +20,13 @@ export const CollectionPreviewPanel = styled.div`
   justify-content: space-between;
   @media screen and (max-width: 800px) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat( 4, 1fr );
     grid-gap: 15px;
+    .menu-item {
+      grid-column: span 2;
+    }
+    .menu-item:nth-last-child(1):nth-child(odd) {
+      grid-column: 2 / span 2;
+    }
   }
 `
