@@ -24,16 +24,27 @@ const Header = ({ currentUser, hidden }) => (
       <Logo className='logo' alt='horn of odin produced by flaticon.com' label='horn of odin produced by flaticon.com'/>
     </LogoContainer>
     <OptionsContainer>
-      <OptionLink to='/shop'>Shop</OptionLink>
-      <OptionLink to='/shop'>Contact</OptionLink>
+      <OptionLink
+        to='/shop'
+        children='Shop'
+      />
+      <OptionLink
+        to='/shop'
+        children='Contact'
+      />
       {
         currentUser ?
         (
-          <OptionLink as='div' onClick={() => auth.signOut()}>
-            Sign Out
-          </OptionLink>
+          <OptionLink
+            as='div'
+            onClick={ () => auth.signOut() }
+            children='Sign Out'
+          />
         ) : (
-          <OptionLink to='/signin'>Sign In</OptionLink>
+          <OptionLink
+            to='/signin'
+            children='Sign In'
+          />
         )
       }
       <CartIcon />
@@ -47,4 +58,4 @@ const mapStateToProps = createStructuredSelector({
   hidden: selectCartHidden
 })
 
-export default connect(mapStateToProps)(Header);
+export default connect( mapStateToProps )(Header);
