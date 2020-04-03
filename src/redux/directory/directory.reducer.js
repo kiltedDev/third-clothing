@@ -1,11 +1,11 @@
-// diverged from course here because in a RW scenario we'd be importing 
+// diverged from course here because in a RW scenario we'd be importing
 // from a database and I'd like to have this structured more in that
 // direction.  p sure they'll do that later anyhow.
 
-import DIRECTORY_DATA from '../../components/directory/directory.data';
+// import DIRECTORY_DATA from '../../components/directory/directory.data';
 
 const INITIAL_STATE = {
-  sections: DIRECTORY_DATA
+  sections: []
 };
 
 const directoryReducer = (state = INITIAL_STATE, action) => {

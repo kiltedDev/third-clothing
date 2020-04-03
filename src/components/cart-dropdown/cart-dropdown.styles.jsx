@@ -27,7 +27,7 @@ export const CartDropdownItems = styled.div`
   height: 240px;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  // overflow: scroll;
   @media screen and (max-width: 800px) {
     height: 75vh;
   }
