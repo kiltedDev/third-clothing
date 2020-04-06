@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const CollectionPreviewContainer = styled.div`
   display: flex;
@@ -9,10 +10,17 @@ export const CollectionPreviewContainer = styled.div`
   }
 `
 
-export const CollectionPreviewTitle = styled.h1`
-  font-size: 28px;
-  margin-bottom: 25px;
-  text-transform: uppercase;
+export const CollectionPreviewTitle = styled( Link )`
+font-size: 28px;
+margin-bottom: 25px;
+font-weight: 600;
+text-transform: uppercase;
+@media screen and ( min-width: 801px ) {
+  &:hover {
+    color: gray;
+    cursor: pointer;
+  }
+}
 `
 
 export const CollectionPreviewPanel = styled.div`
@@ -22,11 +30,11 @@ export const CollectionPreviewPanel = styled.div`
     display: grid;
     grid-template-columns: repeat( 4, 1fr );
     grid-gap: 15px;
-    .menu-item {
+    .menu-item, .collection-item {
       grid-column: span 2;
-    }
-    .menu-item:nth-last-child(1):nth-child(odd) {
-      grid-column: 2 / span 2;
+      &:nth-last-child(1):nth-child(odd) {
+        grid-column: 2 / span 2;
+      }
     }
   }
 `

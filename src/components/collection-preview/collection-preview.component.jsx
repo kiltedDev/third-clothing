@@ -9,10 +9,11 @@ import {
   CollectionPreviewPanel
 } from './collection-preview.styles';
 
-const CollectionPreview = ({ title, items }) => (
+const CollectionPreview = ({ title, items, linkURL }) => (
   <CollectionPreviewContainer className='collection-preview'>
     <CollectionPreviewTitle
       className='title'
+      to={ linkURL }
       children={ title }
     />
     <CollectionPreviewPanel className='preview'>
