@@ -32,27 +32,27 @@ class App extends React.Component {
     // NOTE: used for seeding the database
     // const { collectionsArray } = this.props;
 
-    this.unsubscribeFromAuth = auth.onAuthStateChanged( async userAuth => {
-      if ( userAuth ) {
-        const userRef = await createUserProfileDocument( userAuth );
-
-        userRef.onSnapshot( snapShot => {
-          setCurrentUser({
-            id: snapShot.id,
-            ...snapShot.data()
-          });
-        });
-      }
-
-      setCurrentUser( userAuth );
-
-      // seeding the database
-      // NOTE: used for seeding the database
-      // addCollectionAndDocuments(
-      //   'collections',
-      //   collectionsArray.map(({ title, items }) => ({ title, items }))
-      // );
-    });
+    // this.unsubscribeFromAuth = auth.onAuthStateChanged( async userAuth => {
+    //   if ( userAuth ) {
+    //     const userRef = await createUserProfileDocument( userAuth );
+    //
+    //     userRef.onSnapshot( snapShot => {
+    //       setCurrentUser({
+    //         id: snapShot.id,
+    //         ...snapShot.data()
+    //       });
+    //     });
+    //   }
+    //
+    //   setCurrentUser( userAuth );
+    //
+    //   // seeding the database
+    //   // NOTE: used for seeding the database
+    //   // addCollectionAndDocuments(
+    //   //   'collections',
+    //   //   collectionsArray.map(({ title, items }) => ({ title, items }))
+    //   // );
+    // });
   }
 
   componentWillUnmount() {
