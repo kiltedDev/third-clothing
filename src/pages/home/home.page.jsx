@@ -2,16 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import Directory from '../../components/directory/directory.component';
-import { fetchCollectionsStartAsync } from '../../redux/shop/shop.actions';
+import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
 import { hideCart } from '../../redux/cart/cart.actions';
 
 import { HomePageContainer } from './home.styles';
 
 class HomePage extends React.Component {
   componentDidMount() {
-    const { fetchCollectionsStartAsync, hideCart } = this.props;
+    const { fetchCollectionsStart, hideCart } = this.props;
     hideCart();
-    fetchCollectionsStartAsync();
+    fetchCollectionsStart();
   }
 
   render() {
@@ -24,7 +24,7 @@ class HomePage extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  fetchCollectionsStartAsync: () => dispatch( fetchCollectionsStartAsync() ),
+  fetchCollectionsStart: () => dispatch( fetchCollectionsStart() ),
   hideCart: () => dispatch( hideCart() )
 });
 
