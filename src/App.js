@@ -7,7 +7,6 @@ import { GlobalStyle } from './global.style';
 
 import Header from './components/header/header.component';
 
-import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 // NOTE: used for seeding the database
 // import { selectCollectionsForPreview } from './redux/shop/shop.selectors';
@@ -17,42 +16,11 @@ import ShopPage            from './pages/shop/shop.page';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.page';
 import CheckoutPage        from './pages/checkout/checkout.page';
 
-import {
-  // NOTE: used for seeding the database
-  // addCollectionAndDocuments,
-  auth,
-  createUserProfileDocument
-} from './firebase/firebase.utils';
-
 class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    const { setCurrentUser } = this.props;
-    // NOTE: used for seeding the database
-    // const { collectionsArray } = this.props;
 
-    // this.unsubscribeFromAuth = auth.onAuthStateChanged( async userAuth => {
-    //   if ( userAuth ) {
-    //     const userRef = await createUserProfileDocument( userAuth );
-    //
-    //     userRef.onSnapshot( snapShot => {
-    //       setCurrentUser({
-    //         id: snapShot.id,
-    //         ...snapShot.data()
-    //       });
-    //     });
-    //   }
-    //
-    //   setCurrentUser( userAuth );
-    //
-    //   // seeding the database
-    //   // NOTE: used for seeding the database
-    //   // addCollectionAndDocuments(
-    //   //   'collections',
-    //   //   collectionsArray.map(({ title, items }) => ({ title, items }))
-    //   // );
-    // });
   }
 
   componentWillUnmount() {
@@ -86,13 +54,8 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  // NOTE: used for seeding the database
-  // collectionsArray: selectCollectionsForPreview,
   currentUser: selectCurrentUser
 });
 
-const mapDispatchToProps = dispatch => ({
-  setCurrentUser: user => dispatch( setCurrentUser( user ) )
-});
 
-export default connect( mapStateToProps, mapDispatchToProps )( App );
+export default connect( mapStateToProps )( App );

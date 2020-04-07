@@ -66,6 +66,7 @@ export const convertCollectionSnapshotToMap = collection => {
       imageURL,
       linkURL
     };
+    return transformedCollection;
   });
 
   return transformedCollection
