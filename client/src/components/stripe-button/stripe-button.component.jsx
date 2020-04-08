@@ -22,16 +22,15 @@ const StripeCheckoutButton = ({ price, clearCart }) => {
     })
       .then(response => {
         console.log(response)
+        clearCart();
         alert( 'Payment successful');
       })
       .catch( error => {
-        console.log( error );
-        console.log( 'Payment error: ', JSON.parse( error ) );
+        console.log( 'Payment error: ', error );
         alert(
           'There was an issue with your payment. Please make sure you used the provided test card.'
         )
       })
-    // clearCart();
   }
 
   return (
