@@ -47,7 +47,7 @@ export function* signInWithEmail( {payload: { email, password } } ) {
     yield getSnapshotFromUserAuth( user );
   } catch ( error ) {
     put(
-      userAuthFailure(error)
+      userAuthFailure( error )
     )
   }
 }
