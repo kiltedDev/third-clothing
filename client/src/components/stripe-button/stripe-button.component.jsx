@@ -38,13 +38,14 @@ const StripeCheckoutButton = ({ price, clearCart }) => {
       label='Pay Now'
       name='Third Clothing'
       billingAddress
-      shipingAddress
+      shippingAddress
       image='https://i.ibb.co/LR3mZZn/horn.png'
       description={ `Your total is $${price}` }
       amount={ priceForStripe }
       panelLabel='Pay Now'
       token={ onToken }
       stripeKey={ publishableKey }
+      label='Pay Now'
     />
   )
 }
