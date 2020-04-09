@@ -6,7 +6,7 @@
 import ShopActionTypes from './shop.types'
 
 const INITIAL_STATE = {
-  collections: null,
+  sections: null,
   isFetching: false,
   errorMessage: undefined
 };
@@ -14,23 +14,23 @@ const INITIAL_STATE = {
 const shopReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     // NOTE: replaced with Thunk
-    case ShopActionTypes.UPDATE_COLLECTIONS:
+    case ShopActionTypes.UPDATE_SECTIONS:
       return {
         ...state,
-        collections: action.payload
+        sections: action.payload
       }
-    case ShopActionTypes.FETCH_COLLECTIONS_START:
+    case ShopActionTypes.FETCH_SECTIONS_START:
       return {
         ...state,
         isFetching: true
       }
-    case ShopActionTypes.FETCH_COLLECTIONS_SUCCESS:
+    case ShopActionTypes.FETCH_SECTIONS_SUCCESS:
       return {
         ...state,
         isFetching: false,
-        collections: action.payload
+        sections: action.payload
       }
-    case ShopActionTypes.FETCH_COLLECTIONS_FAILURE:
+    case ShopActionTypes.FETCH_SECTIONS_FAILURE:
       return {
         ...state,
         isFetching: false,

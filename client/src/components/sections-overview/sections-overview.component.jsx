@@ -3,21 +3,20 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import { selectSectionsForPreview } from '../../redux/shop/shop.selectors';
+import SectionPreview from '../section-preview/section-preview.component';
 
-import MenuItem from '../menu-item/menu-item.component';
+import './sections-overview.styles.scss';
 
-import './directory.styles.scss';
-
-const Directory = ({ sections }) => (
-  <div className='directory-menu'>
+const SectionsOverview = ({ sections }) => (
+  <div className='sections-overview'>
     {sections.map(({ id, ...otherSectionProps }) => (
-      <MenuItem key={id} {...otherSectionProps} />
+      <SectionPreview key={id} {...otherSectionProps} />
     ))}
   </div>
 );
 
 const mapStateToProps = createStructuredSelector({
   sections: selectSectionsForPreview
-});
+})
 
-export default connect(mapStateToProps)(Directory);
+export default connect(mapStateToProps)(SectionsOverview);

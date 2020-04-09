@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import CollectionItem from '../../components/collection-item/collection-item.component';
+import SectionItem from '../../components/section-item/section-item.component';
 
-import { selectCollection } from '../../redux/shop/shop.selectors';
+import { selectSection } from '../../redux/shop/shop.selectors';
 
 import {
   CollectionPageContainer,
@@ -21,7 +21,7 @@ const CollectionPage = ({ match, collection }) => {
       />
       <CollectionPageItems className='items' >
         { items.map ( item  => (
-          <CollectionItem
+          <SectionItem
             key={ item.id }
             item={ item }
           />
@@ -32,7 +32,7 @@ const CollectionPage = ({ match, collection }) => {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-  collection: selectCollection(ownProps.match.params.collectionId)(state)
+  collection: selectSection(ownProps.match.params.collectionId)(state)
 });
 
 export default connect(mapStateToProps)(CollectionPage);

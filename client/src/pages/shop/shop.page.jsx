@@ -2,23 +2,23 @@ import React, { useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import CollectionsOverviewContainer from '../../components/collections-overview/collections-overview.container';
+import SectionsOverviewContainer from '../../components/sections-overview/sections-overview.container';
 import CollectionPageContainer from '../collection/collection.container';
-import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
+import { fetchSectionsStart } from '../../redux/shop/shop.actions';
 import { hideCart } from '../../redux/cart/cart.actions';
 
-const ShopPage = ({ match, fetchCollectionsStart, hideCart }) => {
+const ShopPage = ({ match, fetchSectionsStart, hideCart }) => {
   useEffect( () => {
     hideCart();
-    fetchCollectionsStart();
-  }, [ fetchCollectionsStart, hideCart ]);
+    fetchSectionsStart();
+  }, [ fetchSectionsStart, hideCart ]);
 
   return (
     <div className='shop-page'>
       <Route
         exact
         path={ `${match.path}` }
-        component={ CollectionsOverviewContainer }
+        component={ SectionsOverviewContainer }
       />
       <Route
         exact
@@ -30,7 +30,7 @@ const ShopPage = ({ match, fetchCollectionsStart, hideCart }) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  fetchCollectionsStart: () => dispatch( fetchCollectionsStart() ),
+  fetchSectionsStart: () => dispatch( fetchSectionsStart() ),
   hideCart: () => dispatch( hideCart() )
 
 })

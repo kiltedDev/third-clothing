@@ -18,7 +18,7 @@ export const CollectionPageItems = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
 
-  & .collection-item {
+  & .section-item {
     margin-bottom: 30px;
   }
   @media screen and (max-width: 800px) {
