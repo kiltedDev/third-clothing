@@ -21,7 +21,6 @@ const StripeCheckoutButton = ({ price, clearCart }) => {
       }
     })
       .then(response => {
-        console.log(response)
         clearCart();
         alert( 'Payment successful');
       })

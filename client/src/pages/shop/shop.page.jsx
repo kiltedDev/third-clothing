@@ -11,7 +11,7 @@ const ShopPage = ({ match, fetchCollectionsStart, hideCart }) => {
   useEffect( () => {
     hideCart();
     fetchCollectionsStart();
-  }, [ fetchCollectionsStart ]);
+  }, [ fetchCollectionsStart, hideCart ]);
 
   return (
     <div className='shop-page'>
