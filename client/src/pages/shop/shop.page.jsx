@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import SectionsOverviewContainer from '../../components/sections-overview/sections-overview.container';
-import CollectionPageContainer from '../collection/collection.container';
+import SectionPageContainer from '../section/section.container';
 import { fetchSectionsStart } from '../../redux/shop/shop.actions';
 import { hideCart } from '../../redux/cart/cart.actions';
 
@@ -22,8 +22,8 @@ const ShopPage = ({ match, fetchSectionsStart, hideCart }) => {
       />
       <Route
         exact
-        path={ `${match.path}/:collectionId` }
-        component={ CollectionPageContainer }
+        path={ `${match.path}/:sectionId` }
+        component={ SectionPageContainer }
       />
     </div>
   );
