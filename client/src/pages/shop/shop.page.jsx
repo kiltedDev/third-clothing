@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import SectionsOverviewContainer from '../../components/sections-overview/sections-overview.container';
-import SectionPageContainer from '../section/section.container';
+import Spinner from '../../components/spinner/spinner.component';
+
 import { fetchSectionsStart } from '../../redux/shop/shop.actions';
 import { hideCart } from '../../redux/cart/cart.actions';
+
+const SectionsOverviewContainer = lazy( () => import( '../../components/sections-overview/sections-overview.container') );
+const SectionPageContainer = lazy( () => import( '../section/section.container') );
 
 const ShopPage = ({ match, fetchSectionsStart, hideCart }) => {
   useEffect( () => {
@@ -15,16 +18,18 @@ const ShopPage = ({ match, fetchSectionsStart, hideCart }) => {
 
   return (
     <div className='shop-page'>
-      <Route
-        exact
-        path={ `${match.path}` }
-        component={ SectionsOverviewContainer }
-      />
-      <Route
-        exact
-        path={ `${match.path}/:sectionId` }
-        component={ SectionPageContainer }
-      />
+      <Suspense fallback={ <Spinner /> }>
+        <Route
+          exact
+          path={ `${match.path}` }
+          component={ SectionsOverviewContainer }
+          />
+        <Route
+          exact
+          path={ `${match.path}/:sectionId` }
+          component={ SectionPageContainer }
+          />
+      </Suspense>
     </div>
   );
 }
