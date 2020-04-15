@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
       margin: auto;
     }
     @media screen and (max-width: 800px) {
-      padding: 10px;
+      padding: 0 10px 10px 10px;
     }
   }
 

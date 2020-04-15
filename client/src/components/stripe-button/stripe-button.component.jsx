@@ -44,7 +44,6 @@ const StripeCheckoutButton = ({ price, clearCart }) => {
       panelLabel='Pay Now'
       token={ onToken }
       stripeKey={ publishableKey }
-      label='Pay Now'
     />
   )
 }
