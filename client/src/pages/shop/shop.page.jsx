@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import Spinner from '../../components/spinner/spinner.component';
+import ErrorBoundary from '../../components/error-boundary/error-boundary.component';
 
 import { fetchSectionsStart } from '../../redux/shop/shop.actions';
 import { hideCart } from '../../redux/cart/cart.actions';
@@ -18,18 +19,20 @@ const ShopPage = ({ match, fetchSectionsStart, hideCart }) => {
 
   return (
     <div className='shop-page'>
-      <Suspense fallback={ <Spinner /> }>
-        <Route
-          exact
-          path={ `${match.path}` }
-          component={ SectionsOverviewContainer }
-          />
-        <Route
-          exact
-          path={ `${match.path}/:sectionId` }
-          component={ SectionPageContainer }
-          />
-      </Suspense>
+      <ErrorBoundary>
+        <Suspense fallback={ <Spinner /> }>
+          <Route
+            exact
+            path={ `${match.path}` }
+            component={ SectionsOverviewContainer }
+            />
+          <Route
+            exact
+            path={ `${match.path}/:sectionId` }
+            component={ SectionPageContainer }
+            />
+        </Suspense>
+      </ErrorBoundary>
     </div>
   );
 }
