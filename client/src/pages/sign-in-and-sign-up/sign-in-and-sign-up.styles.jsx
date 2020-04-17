@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SignInAndSignUpContainer = styled.div`
+export const SignInAndSignUpContainer = styled.main`
   max-width: 850px;
   display: flex;
   justify-content: space-between;

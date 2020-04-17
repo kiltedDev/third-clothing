@@ -18,7 +18,7 @@ const ShopPage = ({ match, fetchSectionsStart, hideCart }) => {
   }, [ fetchSectionsStart, hideCart ]);
 
   return (
-    <div className='shop-page'>
+    <main className='shop-page'>
       <ErrorBoundary>
         <Suspense fallback={ <Spinner /> }>
           <Route
@@ -33,7 +33,7 @@ const ShopPage = ({ match, fetchSectionsStart, hideCart }) => {
             />
         </Suspense>
       </ErrorBoundary>
-    </div>
+    </main>
   );
 }
 

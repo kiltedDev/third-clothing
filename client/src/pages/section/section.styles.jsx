@@ -22,13 +22,12 @@ export const SectionPageItems = styled.div`
     margin-bottom: 30px;
   }
   @media screen and (max-width: 800px) {
-    display: grid;
-	grid-template-columns: repeat( 4, 1fr );
+	  grid-template-columns: repeat( 4, 1fr );
     grid-gap: 15px;
-    .menu-item {
+    .section-item {
       	grid-column: span 2;
     }
-    .menu-item:nth-last-child(1):nth-child(odd) {
+    .section-item:nth-last-child(1):nth-child(odd) {
     	grid-column: 2 / span 2;
     }
   }

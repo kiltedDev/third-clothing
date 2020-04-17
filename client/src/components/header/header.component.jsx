@@ -26,10 +26,12 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
     <OptionsContainer>
       <OptionLink
         to='/shop'
+        name='Shop'
         children='Shop'
       />
       <OptionLink
         to='/shop'
+        name='Contact'
         children='Contact'
       />
       {
@@ -38,11 +40,13 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
           <OptionLink
             as='div'
             onClick={ signOutStart }
+            name='Sign Out'
             children='Sign Out'
           />
         ) : (
           <OptionLink
             to='/signin'
+            name='Sign In'
             children='Sign In'
           />
         )
