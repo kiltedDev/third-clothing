@@ -76,6 +76,26 @@ export const convertCollectionSnapshotToMap = collection => {
   }, {})
 }
 
+export const convertContactSnapshotToMap = contactList => {
+    const transformedContactList = contactList.docs.map(doc => {
+      const { title, iconUrl, contactInfo, linkTo, iconSize } = doc.data();
+
+      return {
+        id: doc.id,
+        title,
+        iconUrl,
+        contactInfo,
+        linkTo,
+        iconSize
+      };
+    });
+
+    return transformedContactList.reduce((accumulator, collection) => {
+      accumulator[collection.title.toLowerCase()] = collection;
+      return accumulator;
+    }, {});
+}
+
 export const getCurrentUser = () => {
   return new Promise((resolve, reject) => {
     const unsubscribe = auth.onAuthStateChanged( userAuth => {

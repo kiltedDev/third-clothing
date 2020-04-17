@@ -30,7 +30,7 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
         children='Shop'
       />
       <OptionLink
-        to='/shop'
+        to='/contact'
         name='Contact'
         children='Contact'
       />
