@@ -18,7 +18,6 @@ export function* fetchContactDetailsAsync() {
       convertContactSnapshotToMap,
       snapshot
     );
-    console.log(contactDetailsMap);
     yield put( fetchContactDetailsSuccess( contactDetailsMap ) );
   } catch ( error ) {
     yield put( fetchContactDetailsFailure( error.message ) );
@@ -26,7 +25,6 @@ export function* fetchContactDetailsAsync() {
 }
 
 export function* fetchContactDetailsStart() {
-  console.log("Mom's Spaghetti");
   yield takeLatest(
     ContactActionTypes.FETCH_CONTACT_DETAILS_START,
     fetchContactDetailsAsync

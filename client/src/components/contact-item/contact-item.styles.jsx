@@ -23,9 +23,6 @@ export const ContentContainer = styled.div`
 export const ContactItemIcon = styled.a`
 	width: 120px;
 	height: 120px;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-image: ${({ imageUrl }) => `url(${imageUrl})`};
 	background-color: #ccc;
 	border: 1px solid #333;
 	border-radius: 1000px;

@@ -8,7 +8,7 @@ import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { signOutStart } from '../../redux/user/user.actions';
 
-import { ReactComponent as Logo } from '../../assets/horn.svg';
+import Icon from '../../icons/icon.index';
 
 import {
   HeaderContainer,
@@ -21,7 +21,12 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
 
   <HeaderContainer  className='header'>
     <LogoContainer className='logo-container' to='/'>
-      <Logo className='logo' alt='horn of odin produced by flaticon.com' label='horn of odin produced by flaticon.com'/>
+      <Icon
+        className='logo'
+        alt='horn of odin produced by flaticon.com'
+        label='horn of odin produced by flaticon.com'
+        title='horn'
+      />
     </LogoContainer>
     <OptionsContainer>
       <OptionLink
