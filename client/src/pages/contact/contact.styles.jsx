@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const ContactPageContainer = styled.main`
-margin-top: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;

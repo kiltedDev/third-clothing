@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  #root > div > div + div {
+  main {
     margin-top: 90px
   }
 `
