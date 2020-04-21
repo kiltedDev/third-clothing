@@ -35,3 +35,7 @@ export const setCartFromFirebase = cartItems => ({
   type: CartActionTypes.SET_CART_FROM_FIREBASE,
   payload: cartItems
 });
+
+export const checkOutCart = () => ({
+  type: CartActionTypes.CHECK_OUT_CART
+});

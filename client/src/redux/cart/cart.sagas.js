@@ -23,8 +23,8 @@ export function* updateCartInFirebase() {
       const cartRef = yield getUserCartRef( currentUser.id, currentUser.activeCart );
       const cartItems = yield select( selectCartItems );
       yield cartRef.update({ cartItems });
-    } catch (error) {
-      console.log(error);
+    } catch ( error ) {
+      console.log( error.message );
     }
   }
 }
@@ -33,6 +33,21 @@ export function* checkCartFromFirebase({ payload: user }) {
   const cartRef = yield getUserCartRef( user.id, user.activeCart );
   const cartSnapshot = yield cartRef.get();
   yield put( setCartFromFirebase( cartSnapshot.data().cartItems ) );
+}
+
+export function* createNewUserCart() {
+  const currentUser = yield select( selectCurrentUser );
+  if ( currentUser ) {
+    try {
+      console.log(currentUser.id);
+      const newCartRef = yield newUserCart( currentUser.id );
+      console.log(newCartRef);
+    } catch ( error ) {
+      console.log( error.message )
+    }
+  }
+  yield put( setCartFromFirebase( [] ) );
+
 }
 
 export function* onUserSignIn() {
@@ -50,10 +65,20 @@ export function* onCartChange() {
   );
 }
 
+export function* onCheckOut() {
+  yield takeLatest(
+    [
+      CartActionTypes.CHECK_OUT_CART
+    ],
+    createNewUserCart
+  );
+}
+
 export function* cartSagas() {
   yield( all([
     call( onSignOutSuccess ),
     call( onCartChange ),
-    call( onUserSignIn )
+    call( onUserSignIn ),
+    call( onCheckOut )
   ]))
 }
