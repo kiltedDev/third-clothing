@@ -105,6 +105,28 @@ export const getCurrentUser = () => {
   });
 }
 
+export const getUserCartRef = async ( userId, cartId ) => {
+  const cartRef = firestore.collection( 'carts' ).doc( cartId );
+  const snapShot = await cartRef.get();
+
+  if ( !snapShot.exists ) {
+    const newCartRef = await newUserCart( userId )
+    return newCartRef;
+  } else {
+    return snapShot.ref;
+  }
+};
+
+export const newUserCart = async ( userId ) => {
+  const userRef = firestore.collection( 'users' ).doc( userId );
+  const cartDocRef = firestore.collection( 'carts' ).doc();
+  await cartDocRef.set({ userId: userRef.id, cartItems: [] });
+  await userRef.set({
+      activeCart: cartDocRef.id
+  }, { merge: true })
+  return cartDocRef;
+}
+
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
