@@ -11,7 +11,7 @@ import {
   ContactSubtitle
 } from './contact-item.styles';
 
-const ContactItem = ({ title, contactInfo, iconUrl, linkTo, iconSize }) => (
+export const ContactItem = ({ title, contactInfo, linkTo, iconSize }) => (
   <ContactItemContainer
     className='contact-item'
   >

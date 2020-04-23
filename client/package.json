@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:5000",
+  "license": "UNLICENSED",
   "dependencies": {
     "axios": "0.19.0",
     "firebase": "6.0.2",
@@ -21,15 +22,15 @@
     "styled-components": "4.2.0"
   },
   "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "react-scripts": "^3.4.1"
-  },
-  "resolutions": {
-    "babel-jest": "24.7.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

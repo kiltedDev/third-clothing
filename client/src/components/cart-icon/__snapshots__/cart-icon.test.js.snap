@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartIcon renders a cart icon 1`] = `
+"<CartIconContainer className=\\"cart-icon\\" onClick={[Function: mockConstructor]}>
+  <ShoppingIcon className=\\"shopping-icon\\" title=\\"shopping-bag\\" />
+  <ItemCount className=\\"item-count\\">
+    0
+  </ItemCount>
+</CartIconContainer>"
+`;

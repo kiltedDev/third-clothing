@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactItem should render ContactItem component 1`] = `
+"<styled.div className=\\"contact-item\\">
+  <styled.div className=\\"content\\">
+    <ContactItemIcon href=\\"www.facespace.com/cool-guy-82\\" className=\\"contact-icon\\" iconSize=\\"50px\\">
+      <Icon title=\\"FaceSpace\\" />
+    </ContactItemIcon>
+    <ContactTitle className=\\"title\\">
+      FACESPACE
+    </ContactTitle>
+    <styled.a name=\\"cool-guy-82\\" href=\\"www.facespace.com/cool-guy-82\\" className=\\"deets\\">
+      cool-guy-82
+    </styled.a>
+  </styled.div>
+</styled.div>"
+`;
