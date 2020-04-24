@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionPreview component should render SectionPreview component 1`] = `
+"<styled.div className=\\"section-preview\\">
+  <Styled(Link) className=\\"title\\" to=\\"/hats\\">
+    hats
+  </Styled(Link)>
+  <SectionPreviewPanel className=\\"preview\\">
+    <Connect(SectionItem) item={{...}} />
+    <Connect(SectionItem) item={{...}} />
+    <Connect(SectionItem) item={{...}} />
+    <Connect(SectionItem) item={{...}} />
+  </SectionPreviewPanel>
+</styled.div>"
+`;

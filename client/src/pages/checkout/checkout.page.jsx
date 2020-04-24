@@ -14,7 +14,7 @@ import {
   TestWarning
 } from './checkout.styles';
 
-const CheckoutPage = ({ cartItems, cartTotal }) => {
+export const CheckoutPage = ({ cartItems, cartTotal }) => {
   return(
     <CheckoutPageContainer className='checkout-page'>
       <CheckoutHeader className='checkout-header'>

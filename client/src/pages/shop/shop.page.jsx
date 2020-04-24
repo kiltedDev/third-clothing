@@ -8,10 +8,12 @@ import ErrorBoundary from '../../components/error-boundary/error-boundary.compon
 import { fetchSectionsStart } from '../../redux/shop/shop.actions';
 import { hideCart } from '../../redux/cart/cart.actions';
 
-const SectionsOverviewContainer = lazy( () => import( '../../components/sections-overview/sections-overview.container') );
+import { ShopPageContainer } from './shop.styles';
+
+const SectionsOverview = lazy( () => import( '../../components/sections-overview/sections-overview.component') );
 const SectionPageContainer = lazy( () => import( '../section/section.container') );
 
-const ShopPage = ({ match, fetchSectionsStart, hideCart }) => {
+export const ShopPage = ({ match, fetchSectionsStart, hideCart }) => {
   useEffect( () => {
     hideCart();
     fetchSectionsStart();
@@ -24,7 +26,7 @@ const ShopPage = ({ match, fetchSectionsStart, hideCart }) => {
           <Route
             exact
             path={ `${match.path}` }
-            component={ SectionsOverviewContainer }
+            component={ SectionsOverview }
             />
           <Route
             exact

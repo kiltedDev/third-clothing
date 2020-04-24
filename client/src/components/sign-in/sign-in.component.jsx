@@ -15,7 +15,7 @@ import {
   SignInButtonsContainer
 } from './sign-in.styles';
 
-const SignIn = ({ emailSignInStart, googleSignInStart }) => {
+export const SignIn = ({ emailSignInStart, googleSignInStart }) => {
   const [ userCredentials, setUserCredentials ] = useState({
     email: '',
     password: ''
@@ -61,13 +61,16 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
 
           />
         <SignInButtonsContainer className='buttons'>
-          <CustomButton type='submit'> Sign in </CustomButton>
+          <CustomButton
+            type='submit'
+            children={ 'Sign in' }
+          />
           <CustomButton
             onClick={ googleSignInStart }
             type='button'
             isGoogleSignIn
             children='Sign in with Google'
-            />
+          />
         </SignInButtonsContainer>
       </form>
     </SignInContainer>

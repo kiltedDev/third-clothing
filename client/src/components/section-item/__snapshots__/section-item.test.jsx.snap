@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionItem component should render SectionItem component 1`] = `
+"<styled.div className=\\"section-item\\">
+  <BackgroundImage className=\\"image\\" imageUrl=\\"www.coolimage.com\\" />
+  <styled.div>
+    <NameContainer>
+      Boomer
+    </NameContainer>
+    <styled.span>
+      25
+    </styled.span>
+  </styled.div>
+  <AddButton onClick={[Function: onClick]} inverted={true}>
+    Add to cart
+  </AddButton>
+</styled.div>"
+`;

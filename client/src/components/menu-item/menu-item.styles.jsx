@@ -28,7 +28,7 @@ export const MenuItemContainer = styled.div`
 	overflow: hidden;
   ${ GetMenuItemStyles }
   @media screen and (max-width: 800px) {
-    height:200px;  
+    height:200px;
   }
 
 
@@ -89,3 +89,6 @@ export const ContentSubtitle = styled.span`
   font-weight: lighter;
   font-size: 16px;
 `;
+
+MenuItemContainer.displayName = 'MenuItemContainer';
+BackgroundImageContainer.displayName = 'BackgroundImageContainer';

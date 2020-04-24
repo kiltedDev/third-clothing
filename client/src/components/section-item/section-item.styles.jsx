@@ -80,3 +80,7 @@ export const PriceContainer = styled.span`
   width: 10%;
   text-align: right;
 `;
+
+BackgroundImage.displayName = 'BackgroundImage';
+AddButton.displayName = 'AddButton';
+NameContainer.displayName = 'NameContainer';

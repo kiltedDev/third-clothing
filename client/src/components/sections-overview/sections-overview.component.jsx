@@ -5,14 +5,14 @@ import { createStructuredSelector } from 'reselect';
 import { selectSectionsForPreview } from '../../redux/shop/shop.selectors';
 import SectionPreview from '../section-preview/section-preview.component';
 
-import './sections-overview.styles.scss';
+import { SectionsOverviewContainer } from './sections-overview.styles';
 
-const SectionsOverview = ({ sections }) => (
-  <div className='sections-overview'>
+export const SectionsOverview = ({ sections }) => (
+  <SectionsOverviewContainer className='sections-overview'>
     {sections.map(({ id, ...otherSectionProps }) => (
       <SectionPreview key={id} {...otherSectionProps} />
     ))}
-  </div>
+  </SectionsOverviewContainer>
 );
 
 const mapStateToProps = createStructuredSelector({

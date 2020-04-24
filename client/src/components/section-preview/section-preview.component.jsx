@@ -2,14 +2,13 @@ import React from 'react';
 
 import SectionItem from '../section-item/section-item.component';
 
-// import './section-preview.styles.scss';
 import {
   SectionPreviewContainer,
   SectionPreviewTitle,
   SectionPreviewPanel
 } from './section-preview.styles';
 
-const SectionPreview = ({ title, items, linkURL }) => (
+export const SectionPreview = ({ title, items, linkURL }) => (
   <SectionPreviewContainer className='section-preview'>
     <SectionPreviewTitle
       className='title'

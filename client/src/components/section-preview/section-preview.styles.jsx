@@ -38,3 +38,5 @@ export const SectionPreviewPanel = styled.div`
     }
   }
 `
+
+SectionPreviewPanel.displayName = 'SectionPreviewPanel';
