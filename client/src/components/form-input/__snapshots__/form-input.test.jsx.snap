@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput should have a lebel when required 1`] = `
+"<div className=\\"group\\">
+  <input className=\\"form-input\\" onChange={[Function: mockConstructor]} />
+  <label className=\\" form-input-label\\">
+    email
+  </label>
+</div>"
+`;
+
+exports[`FormInput should render FormInput component 1`] = `
+"<div className=\\"group\\">
+  <input className=\\"form-input\\" onChange={[Function: mockConstructor]} />
+</div>"
+`;

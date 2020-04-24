@@ -6,14 +6,14 @@ import { selectContactDetailsForSharing } from '../../redux/contact/contact.sele
 
 import ContactItem from '../contact-item/contact-item.component';
 
-import './detail-directory.styles.scss';
+import { DirectoryMenu } from './detail-directory.styles';
 
-const DetailDirectory = ({ contactDetails }) => (
-  <div className='detail-directory'>
+export const DetailDirectory = ({ contactDetails }) => (
+  <DirectoryMenu className='detail-directory'>
     {contactDetails.map(({ id, ...otherProps }) => (
       <ContactItem key={id} {...otherProps} />
     ))}
-  </div>
+  </DirectoryMenu>
 );
 
 const mapStateToProps = createStructuredSelector({

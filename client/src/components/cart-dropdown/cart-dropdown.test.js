@@ -50,6 +50,6 @@ describe('CartDropdown', () => {
     };
 
     const newWrapper = shallow(<CartDropdown {...mockProps} />);
-    expect(newWrapper.exists('EmptyMessage')).toBe(true);
+    expect( newWrapper.exists('EmptyMessage') ).toBe( true );
   });
 });

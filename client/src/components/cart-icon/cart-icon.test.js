@@ -22,11 +22,11 @@ describe('CartIcon', () => {
   })
 
   it('calls toggleCartHidden when clicked', () => {
-    wrapper.find('CartIconContainer').simulate('click');
-    expect(mockToggleCartHidden).toHaveBeenCalled();
+    wrapper.find( 'CartIconContainer' ).simulate( 'click' );
+    expect( mockToggleCartHidden ).toHaveBeenCalled();
   })
-  
+
   it('shows the correct count in the icon',() => {
-    expect(wrapper.find( 'ItemCount' ).text()).toEqual("0");
+    expect(wrapper.find( 'ItemCount' ).text()).toEqual( '0' );
   })
 })

@@ -4,8 +4,15 @@ import { CheckoutItem } from './checkout-item.component';
 
 describe('CheckoutItem', () => {
   let wrapper;
+  let mockRemoveItem;
+  let mockAddItem;
+  let mockClearItem;
 
   beforeAll(() => {
+    mockRemoveItem = jest.fn();
+    mockAddItem = jest.fn();
+    mockClearItem = jest.fn();
+
     const mockProps = {
       cartItem: {
         imageUrl: 'www.coolimage.com',
@@ -13,13 +20,29 @@ describe('CheckoutItem', () => {
         price: 25,
         quantity: 3
       },
-      clearItem: jest.fn,
-      addItem: jest.fn,
-      remove: jest.fn
+      removeItem: mockRemoveItem,
+      addItem: mockAddItem,
+      clearItem: mockClearItem
     }
     wrapper = shallow(<CheckoutItem { ...mockProps } />)
-  })
+  });
+
   it('should render CheckoutItem component',() => {
     expect( wrapper.debug() ).toMatchSnapshot();
+  })
+
+  it('should call removeItem when < is clicked',() => {
+    wrapper.find('.quantity .left').simulate('click');
+    expect(mockRemoveItem).toHaveBeenCalled();
+  })
+
+  it('should call addItem when > is clicked',() => {
+    wrapper.find('.quantity .right').simulate('click');
+    expect(mockAddItem).toHaveBeenCalled();
+  })
+
+  it('should call clearItem when X is clicked',() => {
+    wrapper.find('RemoveButtonContainer').simulate('click');
+    expect(mockClearItem).toHaveBeenCalled();
   })
 })
