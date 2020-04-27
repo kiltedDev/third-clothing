@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckoutPage component should render CheckoutPage component 1`] = `
+"<styled.main className=\\"checkout-page\\">
+  <styled.div className=\\"checkout-header\\">
+    <styled.div className=\\"header-block\\">
+      <span>
+        Product
+      </span>
+    </styled.div>
+    <styled.div className=\\"header-block\\">
+      <span>
+        Description
+      </span>
+    </styled.div>
+    <styled.div className=\\"header-block\\">
+      <span>
+        Quantity
+      </span>
+    </styled.div>
+    <styled.div className=\\"header-block\\">
+      <span>
+        Price
+      </span>
+    </styled.div>
+    <styled.div className=\\"header-block\\">
+      <span>
+        Remove
+      </span>
+    </styled.div>
+  </styled.div>
+  <styled.div className=\\"total\\" Children=\\"Total: 144\\" />
+  <styled.div className=\\"test-warning\\">
+    * Please use the following test credit card for payment*
+    <br />
+    4242 4242 4242 4242
+    <br />
+    Exp: 01/24 - CVV: 123
+  </styled.div>
+  <Connect(StripeCheckoutButton) price={144} />
+</styled.main>"
+`;

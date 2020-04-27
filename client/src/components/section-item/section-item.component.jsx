@@ -12,19 +12,27 @@ import {
   PriceContainer
 } from './section-item.styles';
 
-const SectionItem = ({ item, addItem }) => {
+export const SectionItem = ({ item, addItem }) => {
   const { name, price, imageUrl } = item;
 
   return (
     <SectionItemContainer className='section-item'>
-      <BackgroundImage className='image' imageUrl={imageUrl} />
+      <BackgroundImage
+        className='image'
+        imageUrl={ imageUrl }
+      />
       <SectionFooterContainer>
-        <NameContainer>{name}</NameContainer>
-        <PriceContainer>{price}</PriceContainer>
+        <NameContainer
+          children={ name }
+        />
+        <PriceContainer
+          children={ price }
+        />
       </SectionFooterContainer>
-      <AddButton onClick={() => addItem(item)} inverted>
-        Add to cart
-      </AddButton>
+      <AddButton
+        onClick={() => addItem(item)} inverted
+        children={ 'Add to cart' }
+      />
     </SectionItemContainer>
   );
 };

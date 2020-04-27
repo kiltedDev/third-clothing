@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShopPage should render ShopPage component 1`] = `
+"<BrowserRouter>
+  <Router history={{...}}>
+    <Provider store={{...}}>
+      <ShopPage match={[Function: mockConstructor]} hideCart={[Function: mockConstructor]} fetchSectionsStart={[Function: mockConstructor]}>
+        <main className=\\"shop-page\\">
+          <ErrorBoundary>
+            <Suspense fallback={{...}}>
+              <Route exact={true} path=\\"undefined\\" component={{...}} />
+              <Route exact={true} path=\\"undefined/:sectionId\\" component={{...}} />
+            </Suspense>
+          </ErrorBoundary>
+        </main>
+      </ShopPage>
+    </Provider>
+  </Router>
+</BrowserRouter>"
+`;

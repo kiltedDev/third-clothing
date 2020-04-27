@@ -56,3 +56,5 @@ export const OptionStyles = css`
 export const OptionLink = styled(Link)`
   ${OptionStyles}
 `
+
+OptionLink.displayName = 'OptionLink';

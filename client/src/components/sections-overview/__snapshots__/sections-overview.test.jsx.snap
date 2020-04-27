@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionsOverview component should render SectionsOverview component 1`] = `
+"<SectionsOverviewContainer className=\\"sections-overview\\">
+  <SectionPreview />
+  <SectionPreview />
+  <SectionPreview />
+</SectionsOverviewContainer>"
+`;

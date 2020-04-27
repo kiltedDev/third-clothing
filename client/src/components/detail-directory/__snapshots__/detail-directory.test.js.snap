@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailDirectory should render DetailDirectory component 1`] = `
+"<DirectoryMenu className=\\"detail-directory\\">
+  <withRouter(ContactItem) title=\\"FaceSpace\\" contactInfo=\\"cool-guy-82\\" linkTo=\\"www.facespace.com/cool-guy-82\\" iconSize=\\"50px\\" />
+</DirectoryMenu>"
+`;

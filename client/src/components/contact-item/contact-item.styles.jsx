@@ -55,3 +55,6 @@ export const ContactSubtitle = styled.a`
   font-size: 16px;
 	cursor: pointer;
 `;
+
+ContactItemIcon.displayName = 'ContactItemIcon';
+ContactTitle.displayName = 'ContactTitle';

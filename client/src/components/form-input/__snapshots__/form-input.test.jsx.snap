@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput should not have a label when none requested 1`] = `
+"<styled.div className=\\"group\\">
+  <FormInputContainer className=\\"form-input\\" onChange={[Function: mockConstructor]} />
+</styled.div>"
+`;
+
+exports[`FormInput should render FormInput component 1`] = `
+"<styled.div className=\\"group\\">
+  <FormInputContainer className=\\"form-input\\" onChange={[Function: mockConstructor]} />
+  <FormInputLabel className=\\" form-input-label\\">
+    email
+  </FormInputLabel>
+</styled.div>"
+`;

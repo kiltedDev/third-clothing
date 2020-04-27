@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem renders a cart item 1`] = `
+"<CartItemContainer className=\\"cart-item\\">
+  <styled.img src=\\"www.images.com/cool-image.png\\" alt=\\"Really Cool Coat\\" />
+  <styled.div className=\\"item-details\\">
+    <CartItemName className=\\"name\\">
+      Really Cool Coat
+    </CartItemName>
+    <CartItemPrice className=\\"price\\">
+      3 x $25
+    </CartItemPrice>
+  </styled.div>
+</CartItemContainer>"
+`;

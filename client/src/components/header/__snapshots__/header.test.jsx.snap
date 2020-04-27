@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render Header component 1`] = `
+"<styled.div className=\\"header\\">
+  <Styled(Link) className=\\"logo-container\\" to=\\"/\\">
+    <Icon className=\\"logo\\" alt=\\"horn of odin produced by flaticon.com\\" label=\\"horn of odin produced by flaticon.com\\" title=\\"horn\\" />
+  </Styled(Link)>
+  <styled.div>
+    <OptionLink to=\\"/shop\\" name=\\"Shop\\">
+      Shop
+    </OptionLink>
+    <OptionLink to=\\"/contact\\" name=\\"Contact\\">
+      Contact
+    </OptionLink>
+    <OptionLink as=\\"div\\" onClick={[Function: mockConstructor]} name=\\"Sign Out\\">
+      Sign Out
+    </OptionLink>
+    <Connect(CartIcon) />
+  </styled.div>
+</styled.div>"
+`;
