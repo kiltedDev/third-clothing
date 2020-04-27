@@ -2,20 +2,19 @@ import styled from 'styled-components';
 
 export const ContactItemContainer = styled.div`
 	width: 190px;
+	height: 304px;
 	display: inline-block;
-	align:center;
 	float: none;
 	vertical-align: top;
+	margin:auto;
 `;
 
 export const ContentContainer = styled.div`
   height: 100%;
 	width: 100%
   padding: 0 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+	grid-template-rows: 120px 50px 40px;
   background-color: white;
   opacity: 0.7;
 `;
@@ -23,6 +22,7 @@ export const ContentContainer = styled.div`
 export const ContactItemIcon = styled.a`
 	width: 120px;
 	height: 120px;
+	margin:auto;
 	background-color: #ccc;
 	border: 1px solid #333;
 	border-radius: 1000px;
@@ -42,15 +42,14 @@ export const ContactItemIcon = styled.a`
 `;
 
 export const ContactTitle = styled.span`
-	margin-top: 20px;
+	margin: 10px auto;
 	font-weight: bold;
-  margin-bottom: 6px;
   font-size: 22px;
   color: #4969e1;
 `;
 
 export const ContactSubtitle = styled.a`
-	margin-top:10px;
+	margin: 10px auto;
   font-weight: lighter;
   font-size: 16px;
 	cursor: pointer;
